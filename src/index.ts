@@ -5,6 +5,10 @@ const port = 3000;
 
 app.use(express.json());
 
+app.get('/hello', (req:Request, res:Response) => {
+    res.send('Hello!')
+})
+
 // Endpoint untuk register user
 app.post('/register', (req: Request, res: Response) => {
     const { username, password } = req.body;
